@@ -26,6 +26,13 @@
 *.a
 *.lib
 
+# VS debug files
+*.ilk
+*.pdb
+
+# binary output folders
+out
+
 # Executables
 *.exe
 *.out
