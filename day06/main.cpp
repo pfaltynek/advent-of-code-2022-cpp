@@ -67,7 +67,7 @@ int64_t AoC2022_day06::get_start_message(const size_t length) {
 }
 
 int32_t AoC2022_day06::get_aoc_day() {
-	return 5;
+	return 6;
 }
 
 int32_t AoC2022_day06::get_aoc_year() {
