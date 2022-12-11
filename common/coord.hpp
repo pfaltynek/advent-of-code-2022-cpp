@@ -19,6 +19,10 @@ typedef struct COORD2D {
 		return {x + o.x, y + o.y};
 	}
 
+	inline COORD2D operator-(const COORD2D& o) {
+		return {x - o.x, y - o.y};
+	}
+
 	inline COORD2D(const int32_t x_init, const int32_t y_init) {
 		x = x_init;
 		y = y_init;
@@ -32,6 +36,10 @@ typedef struct COORD2D {
 	inline COORD2D() {
 		x = 0;
 		y = 0;
+	}
+
+	inline int32_t size() {
+		return abs(x) + abs(y);
 	}
 } coord_str;
 
