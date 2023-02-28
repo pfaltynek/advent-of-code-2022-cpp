@@ -142,6 +142,14 @@ typedef struct COORD3D {
 		return abs(x) + abs(y) + abs(z);
 	}
 
+	inline bool in_bounds(const COORD3D min, const COORD3D max) {
+		if ((x <= max.x) && (x >= min.x) && (y <= max.y) && (y >= min.y) && (z <= max.z) && (z >= min.z)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	std::string to_string() {
 		return "[" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + "]";
 	}
