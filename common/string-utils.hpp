@@ -1,8 +1,11 @@
-#include <vector>
-#include <string>
-#include <sstream>
+#ifndef _STRING_UTILS_HPP_
+#define _STRING_UTILS_HPP_
 
-std::vector<std::string> split(std::string to_split, const std::string &delimiter) {
+#include <sstream>
+#include <string>
+#include <vector>
+
+std::vector<std::string> split(std::string to_split, const std::string& delimiter) {
 	std::vector<std::string> result;
 	size_t pos;
 
@@ -34,10 +37,11 @@ std::string join(const std::vector<std::string> to_join, const std::string delim
 		ss << to_join[0];
 	}
 
-	for (size_t i = 1; i < to_join.size(); i++)
-	{
+	for (size_t i = 1; i < to_join.size(); i++) {
 		ss << delimiter << to_join[i];
 	}
 
 	return ss.str();
 }
+
+#endif // _STRING_UTILS_HPP_

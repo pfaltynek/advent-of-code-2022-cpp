@@ -1,8 +1,12 @@
+#ifndef _AOC_HPP_
+#define _AOC_HPP_
+
 #include <fstream>
 #include <iostream>
 #include <stdint.h>
 #include <time.h>
 #include <vector>
+#include <cassert>
 
 class AoC {
   private:
@@ -128,3 +132,4 @@ class AoC {
 		return 0;
 	}
 };
+#endif // _AOC_HPP_
