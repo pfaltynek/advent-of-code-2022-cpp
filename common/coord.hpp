@@ -11,11 +11,15 @@ typedef struct COORD2D {
 		return x == o.x && y == o.y;
 	}
 
+	inline bool const operator==(const COORD2D& o) const {
+		return x == o.x && y == o.y;
+	}
+
 	inline bool const operator<(const COORD2D& l) const {
 		return (l.y < y || (l.y == y && l.x < x));
 	}
 
-	inline COORD2D operator+(const COORD2D& o) {
+	inline COORD2D operator+(const COORD2D& o) const {
 		return {x + o.x, y + o.y};
 	}
 
@@ -149,7 +153,7 @@ typedef struct COORD3D {
 			return false;
 		}
 	}
-	
+
 	std::string to_string() {
 		return "[" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + "]";
 	}
